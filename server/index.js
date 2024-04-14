@@ -4,7 +4,7 @@ import cors from 'cors';
 import dbConnection from "./database/db.js";
 const app=express();
 app.use(cors(
-    {origin:'https://filesharing-five.vercel.app/',
+    {origin:'https://filesharing-five.vercel.app',
     methods:['GET','POST'],
     credentials:true
 }

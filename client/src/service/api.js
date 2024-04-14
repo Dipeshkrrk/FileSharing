@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_URL="https://file-sharing-flame-eta.vercel.app/"
+const API_URL="https://file-sharing-flame-eta.vercel.app"
 export const uploadFile=async(data)=>{
     try {
         let response= await axios.post(`${API_URL}/upload`,data);
