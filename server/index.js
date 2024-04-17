@@ -9,6 +9,13 @@ app.use(cors(
     credentials:true
 }
 ));
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://filesharing-five.vercel.app');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    next();
+});
 app.use('/',router);
 
 const port=8000;
